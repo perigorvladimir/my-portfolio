@@ -1,22 +1,11 @@
-html, body {
-    height: 100%;
-    margin: 0;
-}
-
-.site-content {
-    min-height: 100%;
-    /*adjust the padding according to the footer's height*/
-    padding-bottom: 50px; /* footer height */
-    box-sizing: border-box;
-}
-
+body{
+    display:flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
 
 footer {
-    height: 50px; /* footer height */
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
+    margin-top: auto;
     background-color: #333;
     color: white;
     padding: 20px 0;
@@ -24,7 +13,8 @@ footer {
   
   .footer-columns {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    
   }
   
   .footer-column h3 {
