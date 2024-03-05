@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= title %></title>
-    <link rel="stylesheet" type="text/css" href='/css/style.css'> 
+    <title>
+        <%= title %>
+    </title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
+
 <body>
-    <header>
+    <header style="background-color: red;">
         <%- include('../partials/header') %>
     </header>
 
@@ -16,8 +19,17 @@
         <%- body %>
     </main>
 
-    <footer>
+    <footer style="background-color: blue;">
         <%- include('../partials/footer') %>
     </footer>
 </body>
+<script>
+</script>
+<style>
+    .navbar-nav .nav-item .nav-link.active {
+        background-color: #9210ac;
+        color: #fff;
+    }
+</style>
+
 </html>

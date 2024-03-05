@@ -17,21 +17,22 @@ app.listen(PORT, () => {
 
 app.get("/", async function (req, res) {
     res.render('index', {
-        title: 'Home'
-        // other data
+        title: 'Home',
+        page: 'index'
     });
 });
 
 app.get("/contact", async function (req, res) {
     res.render('contact', {
-        title: 'Contact'
+        title: 'Contact',
+        page: 'contact'
         // other data
     });
 });
 
 app.get("/about", async function (req, res) {
     res.render('about', {
-        title: 'About'
-        // other data
+        title: 'About',
+        page: 'about'
     });
 });
