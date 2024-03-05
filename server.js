@@ -1,21 +1,37 @@
-const express = require('express');
+const express = require("express");
+const expressLayouts = require('express-ejs-layouts');
 const app = express();
-const path = require('path');
-const router = express.Router();
+const PORT = 8080;
 
-app.use('/views', express.static(path.join(__dirname, 'views')))
+app.use(express.static(__dirname + "/public"));
+app.set("views", "./views");
+app.use(expressLayouts);
+app.set("layout", "./layouts/layout");
+app.set("view engine", "ejs");
 
-router.get('/', function(req, res){
-    res.sendFile(path.join(__dirname+'/views/home.html'));
-})
-router.get('/about', function(req, res){
-    res.sendFile(path.join(__dirname+'/views/about.html'));
-})
-router.get('/contact', function(req, res){
-    res.sendFile(path.join(__dirname+'/views/contact.html'));
-})
+//ROUTES HERE
 
-app.use('/', router);
+app.listen(PORT, () => {
+    console.log(`Server is listening on port ${PORT}`);
+});
 
-app.listen(process.env.PORT || 3000);
-console.log('now running');
+app.get("/home", async function (req, res) {
+    res.render('home', {
+        title: 'Home'
+        // other data
+    });
+});
+
+app.get("/contact", async function (req, res) {
+    res.render('contact', {
+        title: 'Contact'
+        // other data
+    });
+});
+
+app.get("/about", async function (req, res) {
+    res.render('about', {
+        title: 'About'
+        // other data
+    });
+});
