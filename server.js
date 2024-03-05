@@ -15,8 +15,8 @@ app.listen(PORT, () => {
     console.log(`Server is listening on port ${PORT}`);
 });
 
-app.get("/home", async function (req, res) {
-    res.render('home', {
+app.get("/", async function (req, res) {
+    res.render('index', {
         title: 'Home'
         // other data
     });
