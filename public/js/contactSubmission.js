@@ -9,14 +9,13 @@ document.addEventListener("DOMContentLoaded", function() {
         const email = document.getElementById("email").value;
         const message = document.getElementById("message").value;
 
-        // Constrói a mensagem personalizada
-        const messageConfirmation = `Olá ${firstName}, recebemos a seguinte mensagem por você: "${message}". Retornaremos contato o mais rápido possível através do seu email (${email}).`;
+       
+        const messageConfirmation = `<div>Hello ${firstName}, we have received the following message from you: "${message}". We will return contact as soon as possible through your email (${email}).</div>`;
 
-        // Exibe a mensagem personalizada
+        
         document.getElementById("messageConfirmation").innerHTML = messageConfirmation;
 
-        // Opcional: Limpar o formulário após o envio
-        form.reset();
+            form.reset();
     });
 });
 
