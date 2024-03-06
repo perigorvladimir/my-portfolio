@@ -3,6 +3,7 @@ const expressLayouts = require('express-ejs-layouts');
 const app = express();
 const PORT = 8080;
 
+app.use(express.static(__dirname));
 app.use(express.static('assets'));
 
 app.use(express.static(__dirname + "/public"));
@@ -10,6 +11,7 @@ app.set("views", "./views");
 app.use(expressLayouts);
 app.set("layout", "./layouts/layout");
 app.set("view engine", "ejs");
+
 
 //ROUTES HERE
 
