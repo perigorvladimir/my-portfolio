@@ -1,8 +1,15 @@
+.navbar-name {
+  transform: translateX(-40%); 
+  font-size: 1.1em;
+}
+
 body{
     display:flex;
     flex-direction: column;
     min-height: 100vh;
   }
+
+
 
 footer {
     margin-top: auto;
