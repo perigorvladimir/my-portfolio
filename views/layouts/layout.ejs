@@ -19,6 +19,8 @@
     <link rel="stylesheet" type="text/css" href='/css/style.css'>
     <script src="/public/js/contactSubmission.js"></script>
 
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
 </head>
 
 <body>
@@ -41,6 +43,12 @@
     //initialize libraries
     new PureCounter();
     AOS.init();
+    var toastElList = [].slice.call(document.querySelectorAll('.toast'));
+    var toastList = toastElList.map(function(toastEl) {
+        return new bootstrap.Toast(toastEl);
+    });
+</script>
+
 </script>
 <style>
     .navbar-nav .nav-item .nav-link.active {
